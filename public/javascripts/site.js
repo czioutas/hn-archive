@@ -62,12 +62,13 @@ xhr.addEventListener("readystatechange", function () {
                 document.querySelector('#searching').classList.toggle("hidden");
                 
                 var i = 1;
+                document.getElementById('dataBody').innerHTML = '';
 
-                content.hits[0].submissions.forEach(function(sb) {
+                content.hits[0].submissions.forEach(function(sb) {                   
                     document.getElementById('tableHead').classList.remove("hidden");
-                    var baseClone = document.getElementById('placeholderTr').cloneNode(true);
+                    var clone = document.getElementsByTagName("template")[0].content.cloneNode(true);
 
-                    var clone = baseClone;
+                    clone.id = "result" + sb.id;
                     clone.querySelector('#rank').innerText = i++;
                     clone.querySelector('#score').innerText = sb.score;
                     clone.querySelector('#title').innerText = sb.title;
@@ -84,11 +85,7 @@ xhr.addEventListener("readystatechange", function () {
                     clone.querySelector('#comments').innerText = sb.numberOfComments;
                     clone.querySelector('#comments').href = clone.querySelector('#comments').href + sb.id;
 
-                    clone.classList.remove("hidden");
-                    clone.style.display = "";
-
                     document.getElementById('dataBody').appendChild(clone);
-
                 });
             });
         }
@@ -96,7 +93,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "https://drakoumel.github.io/hn-archive/public/dates.json");
+xhr.open("GET", "public/dates.json");
 
 xhr.send(data);
 
