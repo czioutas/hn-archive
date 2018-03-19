@@ -79,6 +79,8 @@ xhr.addEventListener("readystatechange", function () {
                     clone.querySelector('#author').innerText = sb.user;
                     clone.querySelector('#author').href = clone.querySelector('#author').href + sb.user;
                     clone.querySelector('#baseurl').innerText = sb.urlBase;
+                    clone.querySelector('#baseurl').href = clone.querySelector('#baseurl').href + sb.urlBase;
+
                     clone.querySelector('#comments').innerText = sb.numberOfComments;
                     clone.querySelector('#comments').href = clone.querySelector('#comments').href + sb.id;
 
