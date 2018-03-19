@@ -96,7 +96,7 @@ xhr.addEventListener("readystatechange", function () {
   }
 });
 
-xhr.open("GET", "http://localhost:3000/dates.json");
+xhr.open("GET", "https://drakoumel.github.io/hn-archive/public/dates.json");
 
 xhr.send(data);
 
