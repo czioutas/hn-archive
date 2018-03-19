@@ -63,7 +63,6 @@ xhr.addEventListener("readystatechange", function () {
                 
                 var i = 1;
 
-
                 content.hits[0].submissions.forEach(function(sb) {
                     document.getElementById('tableHead').classList.remove("hidden");
                     var baseClone = document.getElementById('placeholderTr').cloneNode(true);
@@ -76,7 +75,6 @@ xhr.addEventListener("readystatechange", function () {
                     if (sb.href != null) {
                         var j = sb.href.lastIndexOf("http");
                         clone.querySelector('#title').href = sb.href.substring(j, sb.length);
-                        console.log(sb.href.substring(j, sb.length));
                     }
                     clone.querySelector('#author').innerText = sb.user;
                     clone.querySelector('#author').href = clone.querySelector('#author').href + sb.user;
