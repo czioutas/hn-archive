@@ -1,0 +1,25 @@
+{
+    "short_name": "HN TimeTravel",
+    "name": "HackerNews Time Machine",
+    "theme_color": "#FFFFFF",
+    "background_color": "#FFFFFF",
+    "display": "minimal-ui",
+    "icons": [
+      {
+        "src": "public/images/favicon.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      },
+      {
+        "src": "public/images/favicon.png",
+        "type": "image/png",
+        "sizes": "96x96"
+      },
+      {
+        "src": "public/images/favicon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+      }
+    ],
+    "start_url": "/"
+}
