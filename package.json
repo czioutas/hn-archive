@@ -1,0 +1,11 @@
+{
+  "name": "webarchive-scrapper",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "algoliasearch": "^3.25.1",
+    "bulma": "^0.6.2",
+    "pikaday": "^1.7.0",
+    "puppeteer": "^1.2.0"
+  }
+}
